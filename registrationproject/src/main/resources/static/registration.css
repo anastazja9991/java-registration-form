@@ -1,0 +1,92 @@
+body
+{
+	background-color: white;
+}
+
+.container
+{
+	text-align:center;
+	height: 95vh;
+	position: relative;
+
+}
+
+#header
+{
+	text-align: center;
+	text-shadow: 2px 2px black;
+	background-color: #888888;
+	color: white;
+	font-family: cursive;
+	box-shadow: 10px 10px 20px 20px #888888;
+}
+
+#nav
+{
+	height: 80%;
+	width: 15%;
+	text-align: center;
+	padding-top: 10px;
+	position: absolute;
+	box-shadow: 10px 10px 20px 6px #888888;
+}
+
+#main
+{
+	height:80%;
+	text-align: center;
+	display: block;
+	box-shadow: 10px 10px 20px 20px #888888;
+}
+
+#form
+{
+	padding-top:3%;
+	display: block;
+	padding-left: 30%;
+	text-align: left;
+}
+
+#button-wyslij
+{
+	height: 30px;
+	width: 80px;
+	font-weight: bold;
+}
+
+#button-powrot
+{
+	position: center;
+	height: 30px;
+	width: 80px;
+	font-weight: bold;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+#footer
+{
+	padding-left: 40%;
+	text-align: left;
+}
+
+label
+{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+}
+
+input
+{
+  display: inline-block;
+  float: left;
+}
+
+.error
+{
+    color: red;
+    margin-left: 5px;
+}

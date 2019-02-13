@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz rejestracji</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+
+<div class="container">
+    <div id="header">
+        <h1>Formularz rejestracji</h1>
+    </div>
+    <hr>
+    <div id="nav">Powrót do strony głównej<br><br>
+        <a href="/start"><button id="button-powrot" type="submit" onclick>Powrót</button></a>
+    </div>
+    <div id="main">
+        <form action="#" th:action="@{/registration}" th:object="${registration}" method="post">
+            <div id="form">
+                <label>Imię:</label><input type="text" th:field="*{name}" name="your-first-name"><span class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span><br><br>
+                <label>Nazwisko:</label><input type="text" th:field="*{lastName}" name="your-last-name"><span class="error" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span><br><br>
+                <label>Adres e-mail:</label><input type="text" th:field="*{mail}" name="your-mail"><span class="error" th:if="${#fields.hasErrors('mail')}" th:errors="*{mail}"></span><br><br>
+                <label>Numer telefonu:</label><input type="number" th:field="*{tel}" name="your-telephone-number"><span class="error" th:if="${#fields.hasErrors('tel')}" th:errors="*{tel}"></span><br><br>
+                <label>Login:</label><input type="text" th:field="*{login}" name="your-login"><span class="error" th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></span><br><br>
+                <label>Hasło:</label><input type="password" th:field="*{password}" name="your-password"><span class="error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span><br><br>
+                <label>Powtórz hasło:</label><input type="password" th:field="*{password2}" name="your-password"><span class="error" th:if="${#fields.hasErrors('password2')}" th:errors="*{password2}"></span><br><br>
+            </div>
+            <button id="button-wyslij" type="submit">Wyślij</button>
+        </form>
+    </div>
+    <hr>
+</div>
+</body>
+</html>

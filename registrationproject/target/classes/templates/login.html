@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz logowania</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<div class="container">
+    <div id="header">
+        <h1>Formularz logowania</h1>
+    </div>
+    <hr>
+    <div id="main">
+        <form action="#" th:action="@{/login}" th:object="${login}" method="post">
+            <div id="form">
+                <label>Login:</label><input type="text" th:field="*{login}" name="your-login"><span class="error" th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></span><br><br>
+                <label>Hasło:</label><input type="password" th:field="*{password}" name="your-password"><span class="error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span><br><br>
+            </div>
+            <button id="button-loguj" type="submit">Zaloguj</button>
+        </form>
+    </div>
+    <hr>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Logowanie</title>
+    <link rel="stylesheet" href="final.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<div class="container">
+    <div id="header">
+        <h1>Zalogowano</h1>
+    </div>
+    <div id="main">
+        <p th:text="${login.login}"/>
+        <p th:text="${registration.name} + ' ' + ${registration.lastName}"/>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="result.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<div class="container">
+    <div id="header">
+        <h1>Zarejestrowano</h1>
+    </div>
+    <div id="main">
+        <p th:text="'Użytkownik: ' + ${registration.name} + ' ' + ${registration.lastName}"/>
+        <p th:text="'Aby móc kontynuować, zaloguj się'"/>
+        <a href="/login"><button id="button-loguj" type="submit">Zaloguj</button></a>
+    </div>
+</div>
+</body>
+</html>
